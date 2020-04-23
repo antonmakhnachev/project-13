@@ -7,7 +7,7 @@ const { createUser, getUsers, deleteUser, getUser } = require('../controllers/us
 routerUsers.post('/', createUser);
 routerUsers.get('/:userId', getUser);
 routerUsers.get('/', getUsers);
-routerUsers.delete('/:id', deleteUser);
+routerUsers.delete('/:userId', deleteUser);
 
 
 

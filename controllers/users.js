@@ -15,7 +15,7 @@ module.exports.getUsers = (req, res) => {
 };
 
 module.exports.getUser = (req,res) => {
-    const userId = req.body._id;
+    const userId = req.params.userId;
 
     User.findById(userId)
         .then(user => res.send({ data: user }))
@@ -23,7 +23,7 @@ module.exports.getUser = (req,res) => {
 };
 
 module.exports.deleteUser = (req, res) => {
-    const userId = req.body._id;
+    const userId = req.params.userId;
 
     User.findByIdAndRemove(userId)
         .then(user => res.send({ data: user }))
