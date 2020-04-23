@@ -1,11 +1,10 @@
 {
   "name": "project-13",
   "version": "1.0.0",
-  "description": "project-13_homework",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodem app.js",
-    "dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,16 +16,7 @@
     "url": "https://github.com/antonmakhnachev/project-13/issues"
   },
   "homepage": "https://github.com/antonmakhnachev/project-13#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "nodemon": "^2.0.3"
-  },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.9.10",
-    "webpack": "^4.42.1"
+    "express": "^4.17.1"
   }
 }
