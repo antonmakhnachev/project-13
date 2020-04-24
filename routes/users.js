@@ -2,12 +2,14 @@ const routerUsers = require('express').Router();
 const fsPromises = require('fs').promises;
 const path = require('path');
 const User = require('../models/user'); 
-const { createUser, getUsers, deleteUser, getUser } = require('../controllers/users');
+const { createUser, getUsers, deleteUser, getUser, updateProfile, updateProfileAvatar } = require('../controllers/users');
 
 routerUsers.post('/', createUser);
 routerUsers.get('/:userId', getUser);
 routerUsers.get('/', getUsers);
 routerUsers.delete('/:userId', deleteUser);
+routerUsers.patch('/me', updateProfile);
+routerUsers.patch('/me/avatar', updateProfileAvatar);
 
 
 

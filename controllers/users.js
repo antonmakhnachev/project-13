@@ -30,6 +30,23 @@ module.exports.deleteUser = (req, res) => {
         .catch(() => res.status(500).send({ massege: 'Произошла ошибка' }))
 };
 
+module.exports.updateProfile = (req, res) => {
+    const userId = req.user._id;
+    const { name, about } = req.body
 
+    User.findByIdAndUpdate(userId, {name: name, about: about }, {new: true, runValidators: true})
+        .then((user) => res.send({ newData: user }))
+        .catch(() => res.status(500).send({ massege: 'Произошла ошибка' }))
+
+};
+
+module.exports.updateProfileAvatar = (req, res) => {
+    const userId = req.user._id;
+    const { avatar } = req.body;
+
+    User.findByIdAndUpdate(userId, { avatar: avatar }, {new: true, runValidators: true})
+        .then((user) => res.send({ newAvatar: user }))
+        .catch(() => res.status(500).send({ massege: 'Произошла ошибка' }))
+};
 
 
